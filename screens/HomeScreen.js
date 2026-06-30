@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import PlantCard from "../components/PlantCard"; 
+import CustomButton from "../components/CustomButton";
 import {
   View,
   Text,
@@ -24,12 +25,10 @@ export default function HomeScreen({ navigation }) {
         <Text style={styles.cardNumber}>6</Text>
         <Text style={styles.cardText}>Plantas activas</Text>
 
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate("AddPlant")}
-        >
-          <Text style={styles.buttonText}>+ Agregar planta</Text>
-        </TouchableOpacity>
+        <CustomButton
+            title="+ Agregar planta"
+            onPress={() => navigation.navigate("AddPlant")}
+        />
       </View>
 
       
