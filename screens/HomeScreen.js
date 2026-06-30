@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+import PlantCard from "../components/PlantCard";
 import {
   View,
   Text,
@@ -32,16 +33,21 @@ export default function HomeScreen({ navigation }) {
       </View>
 
       
-      <Text style={styles.sectionTitle}>Recordatorios de hoy</Text>
+    <Text style={styles.sectionTitle}>
+        Recordatorios de hoy
+    </Text>
 
-      <View style={styles.reminder}>
-        <View>
-          <Text style={styles.plantName}>Monstera</Text>
-          <Text style={styles.plantInfo}>Necesita riego</Text>
-        </View>
+    <PlantCard
+       name="Monstera"
+       status="Necesita riego"
+       time="9:00 AM"
+     />
 
-        <Text style={styles.time}>9:00 AM</Text>
-      </View>
+<PlantCard
+  name="Lavanda"
+  status="Necesita riego"
+  time="10:00 AM"
+/>
 
       <View style={styles.reminder}>
         <View>

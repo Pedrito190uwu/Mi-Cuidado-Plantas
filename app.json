@@ -1,31 +1,34 @@
 {
   "expo": {
-    "name": "MiAppMobile",
-    "slug": "mascota-virtual",
+    "name": "PlantCare",
+    "slug": "plantcare",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/favicon.png",
     "userInterfaceStyle": "light",
+
     "ios": {
       "supportsTablet": true
     },
+
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "foregroundImage": "./assets/favicon.png",
+        "backgroundColor": "#E6F4FE"
       },
       "package": "com.marisita190steam.mascotavirtual"
     },
+
     "web": {
       "favicon": "./assets/favicon.png"
     },
+
     "extra": {
       "eas": {
         "projectId": "37bd09c2-7e71-4dab-a35c-c724706c297f"
       }
     },
+
     "owner": "marisita190s-team"
   }
 }
