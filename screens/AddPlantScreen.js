@@ -37,7 +37,10 @@ export default function AddPlantScreen() {
 
   return (
     <View style={styles.container}>
-      <Header title="Agregar Planta" />
+      <Header
+        title="Agregar Planta"
+        subtitle="Registra una nueva planta"
+      />
 
       <InputField
         label="Nombre"
