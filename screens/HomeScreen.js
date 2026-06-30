@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import PlantCard from "../components/PlantCard";
+import PlantCard from "../components/PlantCard"; 
 import {
   View,
   Text,
@@ -43,11 +43,11 @@ export default function HomeScreen({ navigation }) {
        time="9:00 AM"
      />
 
-<PlantCard
-  name="Lavanda"
-  status="Necesita riego"
-  time="10:00 AM"
-/>
+    <PlantCard
+        name="Lavanda"
+        status="Necesita riego"
+        time="10:00 AM"
+    />
 
       <View style={styles.reminder}>
         <View>
