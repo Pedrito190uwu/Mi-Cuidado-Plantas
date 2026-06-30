@@ -1,17 +1,38 @@
 import React, { useState } from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Alert } from "react-native";
 
 import Header from "../Components/Header";
 import InputField from "../Components/InputField";
 import CustomButton from "../Components/CustomButton";
+import usePlants from "../hooks/usePlants";
 
 export default function AddPlantScreen() {
   const [name, setName] = useState("");
   const [species, setSpecies] = useState("");
   const [location, setLocation] = useState("");
 
+  const { addPlant } = usePlants();
+
   const handleSave = () => {
-    console.log("Guardar planta");
+    if (!name || !species || !location) {
+      Alert.alert("Error", "Completa todos los campos.");
+      return;
+    }
+
+    const newPlant = {
+      id: Date.now().toString(),
+      name,
+      species,
+      location,
+    };
+
+    addPlant(newPlant);
+
+    Alert.alert("Éxito", "La planta fue agregada correctamente.");
+
+    setName("");
+    setSpecies("");
+    setLocation("");
   };
 
   return (
@@ -50,7 +71,7 @@ export default function AddPlantScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
     backgroundColor: "#F7FAF5",
+    padding: 20,
   },
 });
