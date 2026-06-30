@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../components/Header";
 import {
   View,
   Text,
@@ -10,15 +11,14 @@ import {
 export default function HomeScreen({ navigation }) {
   return (
     <ScrollView style={styles.container}>
-      {/* Encabezado */}
-      <View style={styles.header}>
-        <Text style={styles.title}>Cuida tus plantas</Text>
-        <Text style={styles.subtitle}>
-          ¡Hola, María! 🌿
-        </Text>
-      </View>
+     
 
-      {/* Tarjeta principal */}
+      <Header
+        title="Cuida tus plantas"
+        subtitle="¡Hola, María! 🌿"
+      />
+
+    
       <View style={styles.card}>
         <Text style={styles.cardNumber}>6</Text>
         <Text style={styles.cardText}>Plantas activas</Text>
@@ -31,7 +31,7 @@ export default function HomeScreen({ navigation }) {
         </TouchableOpacity>
       </View>
 
-      {/* Recordatorios */}
+      
       <Text style={styles.sectionTitle}>Recordatorios de hoy</Text>
 
       <View style={styles.reminder}>
@@ -52,7 +52,7 @@ export default function HomeScreen({ navigation }) {
         <Text style={styles.time}>10:00 AM</Text>
       </View>
 
-      {/* Consejo */}
+    
       <Text style={styles.sectionTitle}>Consejo del día</Text>
 
       <View style={styles.tipCard}>
