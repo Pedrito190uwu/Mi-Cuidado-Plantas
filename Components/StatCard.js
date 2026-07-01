@@ -1,52 +1,30 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet } from "react-native";
 
-export default function StatCard({
-  title,
-  value,
-  icon,
-}) {
+export default function StatCard({ value, label, icon, backgroundColor = "#FFFFFF" }) {
   return (
-    <View style={styles.card}>
-      <Text style={styles.icon}>{icon}</Text>
-
+    <View style={[styles.card, { backgroundColor }]}>
+      {icon && <Image source={icon} style={styles.icon} resizeMode="contain" />}
       <Text style={styles.value}>{value}</Text>
-
-      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.label}>{label}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: "#FFFFFF",
-    borderRadius: 15,
-    padding: 20,
+    borderRadius: 16,
+    padding: 18,
     alignItems: "center",
     justifyContent: "center",
     flex: 1,
-    margin: 8,
+    marginHorizontal: 6,
     shadowColor: "#000",
-    shadowOpacity: 0.08,
-    shadowRadius: 5,
-    elevation: 3,
+    shadowOpacity: 0.05,
+    shadowRadius: 4,
+    elevation: 2,
   },
-
-  icon: {
-    fontSize: 28,
-    marginBottom: 8,
-  },
-
-  value: {
-    fontSize: 24,
-    fontWeight: "bold",
-    color: "#2E7D32",
-  },
-
-  title: {
-    marginTop: 6,
-    fontSize: 14,
-    color: "#666",
-    textAlign: "center",
-  },
+  icon: { width: 32, height: 32, marginBottom: 6, tintColor: "#2E7D32" },
+  value: { fontSize: 28, fontWeight: "700", color: "#2E7D32" },
+  label: { marginTop: 4, fontSize: 13, color: "#666", textAlign: "center" },
 });

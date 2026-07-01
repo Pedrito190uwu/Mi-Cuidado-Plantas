@@ -1,19 +1,15 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
-export default function ReminderCard({
-  plant,
-  date,
-}) {
+export default function ReminderCard({ plant, date, onPress }) {
   return (
-    <View style={styles.card}>
+    <TouchableOpacity style={styles.card} onPress={onPress} activeOpacity={0.7}>
       <View>
         <Text style={styles.plant}>{plant}</Text>
         <Text style={styles.date}>{date}</Text>
       </View>
-
       <Text style={styles.icon}>💧</Text>
-    </View>
+    </TouchableOpacity>
   );
 }
 
@@ -31,19 +27,16 @@ const styles = StyleSheet.create({
     shadowRadius: 5,
     elevation: 3,
   },
-
   plant: {
     fontSize: 17,
     fontWeight: "bold",
     color: "#2F4F2F",
   },
-
   date: {
     marginTop: 5,
     fontSize: 14,
     color: "#666",
   },
-
   icon: {
     fontSize: 28,
   },

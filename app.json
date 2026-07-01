@@ -1,34 +1,42 @@
 {
   "expo": {
-    "name": "PlantCare",
-    "slug": "plantcare",
+    "name": "Plant Care",
+    "slug": "mi-app-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/favicon.png",
     "userInterfaceStyle": "light",
-
+    "splash": {
+      "image": "./assets/favicon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#2E7D32"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
-
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/favicon.png",
-        "backgroundColor": "#E6F4FE"
+        "backgroundColor": "#2E7D32"
       },
-      "package": "com.marisita190steam.mascotavirtual"
+      "package": "com.marisita190.miappmobile"
     },
-
     "web": {
       "favicon": "./assets/favicon.png"
     },
-
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "extra": {
       "eas": {
-        "projectId": "37bd09c2-7e71-4dab-a35c-c724706c297f"
+        "projectId": "38869cb7-8b9d-46e8-b86e-218d8a4d4c2a"
       }
     },
-
-    "owner": "marisita190s-team"
+    "owner": "marisita190"
   }
 }
